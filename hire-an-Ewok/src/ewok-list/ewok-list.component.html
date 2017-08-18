@@ -1,0 +1,11 @@
+<h1> TEST 2</h1>
+
+<span class="count">Number of ewoks available: {{(ewoks | async).length}}</span>
+<div class="ewok fade thumbail" *ngFor="let ewok of ewoks | async">
+    <button type="button" class="close" aria-label="Close" (click)="delete(ewok)"><span aria-hidden="true">&times;</span></button><br>
+    <img class="img-circle center-block" src="{{ewok.thumbnail}}" /><br>
+    <div class="info"><span><strong>Name: </strong>{{ewok.name}}</span>
+        <span><strong>Email: </strong>{{ewok.email}}</span>
+      <span><strong>Cuteness: </strong>{{ewok.cuteness}}</span></div>
+    <a class="btn btn-default">Hire {{ewok.name}}</a>
+</div>
